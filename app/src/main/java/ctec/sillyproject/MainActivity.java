@@ -8,7 +8,7 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.RelativeLayout;
 import android.view.View;
-import android. graphics.Color;
+import android.graphics.Color;
 
 public class MainActivity extends ActionBarActivity
 {
@@ -68,9 +68,21 @@ public class MainActivity extends ActionBarActivity
         blueColor = (int) (Math.random() * 256);
 
         colorChangeButton.setBackgroundColor(Color.rgb(redColor, greenColor, blueColor));
-
     }
 
+    private void changeVisibility()
+    {
+        sillywords.setVisibility(View.GONE);
+
+        if(sillywords.getVisibility() == View.GONE)
+        {
+            sillywords.setVisibility(View.VISIBLE);
+        }
+        else
+        {
+            sillywords.setVisibility(View.GONE);
+        }
+    }
     private void setupListeners()
     {
         colorChangeButton.setOnClickListener(new View.OnClickListener() {
@@ -78,6 +90,7 @@ public class MainActivity extends ActionBarActivity
             public void onClick(View buttonView) {
                 //This is where you put code that happens when you click a button
                 changeColors();
+                changeVisibility();
             }
         });
     }

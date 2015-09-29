@@ -8,15 +8,17 @@
 
     <TextView android:text="@string/silliness" android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/sillywords" />
+        android:id="@+id/sillywords"
+        android:visibility="visible" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/silliness"
         android:id="@+id/sillyButton"
-        android:layout_below="@+id/sillywords"
+        android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="115dp" />
+        android:layout_marginTop="146dp"
+        android:visibility="visible" />
 
 </RelativeLayout>
